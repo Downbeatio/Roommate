@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Item.destroy_all
+Mate.destroy_all
+
+Mate.create!([{name: "Dana"},{name: "Mike"}, {name: "Joe"}, {name: "Pat"}])
+
+p "Roomates created"
