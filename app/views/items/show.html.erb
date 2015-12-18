@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Item:</strong>
   <%= @item.name %>
 </p>
 
 <p>
   <strong>Price:</strong>
   <%= @item.price %>
+</p>
+
+<p>
+  <strong>Roommate:</strong>
+  <%= @mate %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
