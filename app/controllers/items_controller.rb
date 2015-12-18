@@ -5,11 +5,13 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+  
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
+     @roommate_name = Mate.find(@item.roommate_id)
   end
 
   # GET /items/new
@@ -70,5 +72,5 @@ class ItemsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
       params.require(:item).permit(:name, :price, :roommate_id)
-    end 
+    end
 end
