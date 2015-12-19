@@ -4,6 +4,6 @@ class ChangePriceTypeInItems < ActiveRecord::Migration
   end
  
   def self.down
-    change_column :posts, :body, :integer
+    change_column :items, :price, :integer
   end
 end
