@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, :roommate_decode, only: [:show, :edit, :update, :destroy]
+
 
   # GET /items
   # GET /items.json
@@ -11,7 +12,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
-     @roommate_name = Mate.find(@item.roommate_id)
+     
   end
 
   # GET /items/new
@@ -73,4 +74,11 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name, :price, :roommate_id)
     end
+    
+    def roommate_decode
+     @roommate_name = Mate.find(@item.roommate_id).name
+    # @roommate_name.name
+    end
+    
+    
 end
