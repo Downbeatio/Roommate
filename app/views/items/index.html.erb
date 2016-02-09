@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
+<h1>Roommate Totals</h1>
+<h2>Dana: <%= Item.where(roommate_id: 5).sum(:price) %></h2>
+<h2>Patrick: <%= Item.where(roommate_id: 8).sum(:price) %></h2>
+<h2>Mike: <%= Item.where(roommate_id: 6).sum(:price) %></h2>
+<h2>Joe: <%= Item.where(roommate_id: 7).sum(:price) %></h2>
 
 <h1>List Of Items</h1>
+
 
 <table>
   <thead>
