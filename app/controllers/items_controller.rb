@@ -79,6 +79,5 @@ class ItemsController < ApplicationController
      @roommate_name = Mate.find(@item.roommate_id).name
     # @roommate_name.name
     end
-    
-    
-end
+  end  
+
